@@ -1,0 +1,8 @@
+.header-container {
+  height: 3rem;
+  width: 100%;
+  background-color: aqua;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
