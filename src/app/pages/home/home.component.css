@@ -1,0 +1,19 @@
+/* #pinContainer {
+  width: 100%;
+  height: calc(100vh - 3rem);
+
+} */
+.panel {
+  height: calc(100vh - 3rem);
+  width: 100%;
+  /* position: absolute; */
+}
+.profession {
+  background-color: aqua;
+}
+.passions {
+  background-color: blue;
+}
+.skills {
+  background-color: brown;
+}
