@@ -1,10 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+/* @link https://utopia.fyi/type/calculator?c=300,16,1.2,2000,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  --main-color: #1e1f3d;
+  --second-color: #15152d;
+  --font-color: #ededf5;
+  --main-accent-color: #232442;
+  --color-gradient-1: #9f4bf2;
+  --color-gradient-2: #7e5ef2;
+  --color-gradient-3: #7292f2;
+  --dark-color: #131428;
+  --light-color: #343865;
+  --dark-opacity-color: rgb(19, 20, 40, 0.5);
+  --light-opacity-color: rgb(52, 56, 101, 0.7);
+
+  --step--2: clamp(0.69rem, calc(0.68rem + 0.1vw), 0.8rem);
+  --step--1: clamp(0.83rem, calc(0.8rem + 0.16vw), 1rem);
+  --step-0: clamp(1rem, calc(0.96rem + 0.24vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(1.14rem + 0.34vw), 1.56rem);
+  --step-2: clamp(1.44rem, calc(1.35rem + 0.48vw), 1.95rem);
+  --step-3: clamp(1.73rem, calc(1.6rem + 0.67vw), 2.44rem);
+  --step-4: clamp(2.07rem, calc(1.9rem + 0.92vw), 3.05rem);
+  --step-5: clamp(2.49rem, calc(2.25rem + 1.25vw), 3.82rem);
+  --step-6: clamp(2.99rem, calc(2.67rem + 1.68vw), 4.77rem);
+}
 * {
   box-sizing: border-box;
+  font-family: "Asap", sans-serif;
 }
 body {
   margin: 0;
 }
 img {
   max-width: 100%;
+  color: #132e65;
+}
+button {
+  background-image: linear-gradient(
+    135deg,
+    rgba(159, 75, 242, 1) 22%,
+    rgba(126, 94, 242, 1) 52%,
+    rgba(114, 146, 242, 1) 78%
+  );
+  border: none;
+  padding: 12px 18px;
+  border: 1px solid var(--dark-color);
+  border-radius: 28px;
+  font-size: var(--step-0);
+
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
 }
