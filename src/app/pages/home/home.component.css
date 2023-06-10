@@ -1,19 +1,140 @@
-/* #pinContainer {
-  width: 100%;
-  height: calc(100vh - 3rem);
+/* ---- reset ---- */
+/* You can add global styles to this file, and also import other style files */
+/* @link https://utopia.fyi/type/calculator?c=300,16,1.2,2000,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  --main-color: #1e1f3d;
+  --second-color: #15152d;
+  --font-color: #ededf5;
+  --main-accent-color: #232442;
+  --color-gradient-1: #9f4bf2;
+  --color-gradient-2: #7e5ef2;
+  --color-gradient-3: #7292f2;
+  --dark-color: #131428;
+  --light-color: #343865;
+  --dark-opacity-color: rgb(19, 20, 40, 0.5);
+  --light-opacity-color: rgb(52, 56, 101, 0.7);
 
-} */
-.panel {
-  height: calc(100vh - 3rem);
+  --step--2: clamp(0.69rem, calc(0.68rem + 0.1vw), 0.8rem);
+  --step--1: clamp(0.83rem, calc(0.8rem + 0.16vw), 1rem);
+  --step-0: clamp(1rem, calc(0.96rem + 0.24vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(1.14rem + 0.34vw), 1.56rem);
+  --step-2: clamp(1.44rem, calc(1.35rem + 0.48vw), 1.95rem);
+  --step-3: clamp(1.73rem, calc(1.6rem + 0.67vw), 2.44rem);
+  --step-4: clamp(2.07rem, calc(1.9rem + 0.92vw), 3.05rem);
+  --step-5: clamp(2.49rem, calc(2.25rem + 1.25vw), 3.82rem);
+  --step-6: clamp(2.99rem, calc(2.67rem + 1.68vw), 4.77rem);
+}
+canvas {
+  display: block;
+
+  /* vertical-align: bottom; */
+} /* ---- particles.js container ---- */
+#particles-js {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 100%;
-  /* position: absolute; */
+  height: calc(100vh - 3rem);
+  background-color: var(--main-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
-.profession {
-  background-color: aqua;
+.home-container {
+  position: absolute;
+  z-index: 10;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
-.passions {
-  background-color: blue;
+.home-content {
+  font-weight: 700;
+  color: var(--font-color);
+  font-size: var(--step-3);
+  text-align: center;
 }
-.skills {
-  background-color: brown;
+.home-content p {
+  margin: 0.6rem;
+}
+.home-content > p:first-child {
+  font-size: var(--step-4);
+  margin-bottom: 0.9rem;
+}
+.home-content button {
+  margin-top: 2rem;
+}
+.home-image > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: var(--main-accent-color);
+  box-shadow: 0px 15px 10px 0px var(--dark-opacity-color),
+    0px -12px 10px 0px var(--light-opacity-color);
+}
+.home-image > div > div {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    135deg,
+    rgba(159, 75, 242, 1) 22%,
+    rgba(126, 94, 242, 1) 52%,
+    rgba(114, 146, 242, 1) 78%
+  );
+}
+.home-image img {
+  position: relative;
+  z-index: 2;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+.home-others {
+  background-image: url("../../../assets/polygon.svg");
+  background-position: 0 100%;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 0 35px;
+  min-height: calc(100vh - 3rem);
+  background-color: var(--main-color);
+  position: relative;
+  bottom: 0;
+  /* color: #0b3a98; */
+}
+.home-others p {
+  font-weight: 700;
+  color: var(--font-color);
+  font-size: 2rem;
+}
+@media (max-width: 800px) {
+  .home-others {
+    background-size: cover;
+    background-position: 0 110%;
+  }
+}
+
+@media (max-width: 650px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .home-image {
+    display: none;
+  }
 }
