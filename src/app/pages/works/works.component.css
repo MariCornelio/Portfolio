@@ -1,27 +1,3 @@
-/* ---- reset ---- */
-:root {
-  --main-color: #1e1f3d;
-  --second-color: #15152d;
-  --font-color: #ededf5;
-  --main-accent-color: #232442;
-  --color-gradient-1: #9f4bf2;
-  --color-gradient-2: #7e5ef2;
-  --color-gradient-3: #7292f2;
-  --dark-color: #131428;
-  --light-color: #343865;
-  --dark-opacity-color: rgb(19, 20, 40, 0.5);
-  --light-opacity-color: rgb(52, 56, 101, 0.7);
-
-  --step--2: clamp(0.69rem, calc(0.68rem + 0.1vw), 0.8rem);
-  --step--1: clamp(0.83rem, calc(0.8rem + 0.16vw), 1rem);
-  --step-0: clamp(1rem, calc(0.96rem + 0.24vw), 1.25rem);
-  --step-1: clamp(1.2rem, calc(1.14rem + 0.34vw), 1.56rem);
-  --step-2: clamp(1.44rem, calc(1.35rem + 0.48vw), 1.95rem);
-  --step-3: clamp(1.73rem, calc(1.6rem + 0.67vw), 2.44rem);
-  --step-4: clamp(2.07rem, calc(1.9rem + 0.92vw), 3.05rem);
-  --step-5: clamp(2.49rem, calc(2.25rem + 1.25vw), 3.82rem);
-  --step-6: clamp(2.99rem, calc(2.67rem + 1.68vw), 4.77rem);
-}
 .container-works {
   width: 100%;
   display: flex;
@@ -46,11 +22,6 @@
 }
 
 .works {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-  /* flex-direction: column; */
-
   gap: 10px;
   flex-wrap: wrap;
   width: 80%;
@@ -132,86 +103,6 @@
   transform: translateY(0);
 }
 /* ******************************************* */
-
-.modal-works header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.close-container {
-  padding: 5px 2px 2px 2px;
-  margin: 8px;
-  margin-right: 35px;
-  background-color: var(--second-color);
-  border-radius: 5px;
-  border-top: 1px solid var(--dark-color);
-  border-left: 1px solid var(--dark-color);
-  border-bottom: 1px solid var(--light-color);
-  border-right: 1px solid var(--light-color);
-}
-.Icon {
-  /* margin: 5px; */
-  width: 30px;
-  height: 30px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-.Icon span {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 10px;
-  height: 4px;
-  background-color: var(--font-color);
-  width: 100%;
-  /* background: #fff; */
-  border-radius: 4px;
-  transform: rotate(0deg);
-  transition: 0.2s ease-in-out;
-}
-
-.Icon span:nth-child(1),
-.Icon span:nth-child(3) {
-  width: 50%;
-  transform: rotate(45deg);
-}
-
-.Icon span:nth-child(1) {
-  left: 3px;
-  top: 5px;
-}
-
-.Icon span:nth-child(2) {
-  transform: rotate(-45deg);
-}
-
-.Icon span:nth-child(3) {
-  left: 12px;
-  top: 15px;
-}
-
-.Icon:hover span:nth-child(1),
-.Icon:hover span:nth-child(3) {
-  left: -1px;
-}
-
-.Icon:hover span:nth-child(1) {
-  top: 5px;
-  transform: rotate(135deg);
-}
-
-.Icon:hover span:nth-child(2) {
-  transform: rotate(0deg);
-}
-
-.Icon:hover span:nth-child(3) {
-  top: 15px;
-  transform: rotate(45deg);
-}
-
 /* **************************************** */
 .modal-works {
   position: fixed;
@@ -244,9 +135,9 @@
 
 .modal-container > p {
   width: 100%;
-padding: 8px;
-font-size: var(--step-1);
-color: var(--font-color);
+  padding: 8px;
+  font-size: var(--step-1);
+  color: var(--font-color);
   background-image: linear-gradient(
     135deg,
     rgba(159, 75, 242, 1) 22%,

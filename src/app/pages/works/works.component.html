@@ -12,16 +12,10 @@
         </div>
       </div>
       <div class="modal-works" [ngClass]="valid ? '.block' : 'none'">
-        <header>
-          <div class="close-container">
-            <div id="icon" class="Icon" (click)="close()">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
+        <app-close>
 
-        </header>
+        </app-close>
+
         <section class="modal-container">
           <p>Kwai store</p>
           <div class="modal-content">

@@ -1,0 +1,78 @@
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.close-container {
+  padding: 5px 2px 2px 2px;
+  margin: 8px;
+  margin-right: 35px;
+  background-color: var(--second-color);
+  border-radius: 5px;
+  border-top: 1px solid var(--dark-color);
+  border-left: 1px solid var(--dark-color);
+  border-bottom: 1px solid var(--light-color);
+  border-right: 1px solid var(--light-color);
+}
+.Icon {
+  /* margin: 5px; */
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.Icon span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 4px;
+  background-color: var(--font-color);
+  width: 100%;
+  /* background: #fff; */
+  border-radius: 4px;
+  transform: rotate(0deg);
+  transition: 0.2s ease-in-out;
+}
+
+.Icon span:nth-child(1),
+.Icon span:nth-child(3) {
+  width: 50%;
+  transform: rotate(45deg);
+}
+
+.Icon span:nth-child(1) {
+  left: 3px;
+  top: 5px;
+}
+
+.Icon span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.Icon span:nth-child(3) {
+  left: 12px;
+  top: 15px;
+}
+
+.Icon:hover span:nth-child(1),
+.Icon:hover span:nth-child(3) {
+  left: -1px;
+}
+
+.Icon:hover span:nth-child(1) {
+  top: 5px;
+  transform: rotate(135deg);
+}
+
+.Icon:hover span:nth-child(2) {
+  transform: rotate(0deg);
+}
+
+.Icon:hover span:nth-child(3) {
+  top: 15px;
+  transform: rotate(45deg);
+}
