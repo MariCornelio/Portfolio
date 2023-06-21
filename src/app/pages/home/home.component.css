@@ -90,9 +90,9 @@ canvas {
   border-radius: 50%;
   background-image: linear-gradient(
     135deg,
-    rgba(159, 75, 242, 1) 22%,
-    rgba(126, 94, 242, 1) 52%,
-    rgba(114, 146, 242, 1) 78%
+    var(--color-gradient-1) 22%,
+    var(--color-gradient-2) 52%,
+    var(--color-gradient-3) 78%
   );
 }
 .home-image img {

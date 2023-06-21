@@ -12,9 +12,9 @@
   --light-opacity--color: rgb(52, 56, 101, 0.7);
 }
 .header-container {
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 999; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
