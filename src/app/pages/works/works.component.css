@@ -244,14 +244,14 @@
 
 .modal-container > p {
   width: 100%;
-  padding: 8px;
-  font-size: var(--step-1);
-  color: var(--font-color);
+padding: 8px;
+font-size: var(--step-1);
+color: var(--font-color);
   background-image: linear-gradient(
     135deg,
-    var(--color-gradient-1) 22%,
-    var(--color-gradient-2) 52%,
-    var(--color-gradient-3) 78%
+    rgba(159, 75, 242, 1) 22%,
+    rgba(126, 94, 242, 1) 52%,
+    rgba(114, 146, 242, 1) 78%
   );
 }
 
