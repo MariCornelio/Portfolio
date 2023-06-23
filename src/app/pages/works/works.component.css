@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: var(--font-color);
 }
 .container-works > p {
   width: 100%;
@@ -11,7 +12,6 @@
   text-align: center;
   font-size: var(--step-1);
   font-weight: 600;
-  color: var(--font-color);
   border-bottom: 1px solid var(--font-color);
   border-top: 1px solid var(--font-color);
   background-color: var(--main-color);
@@ -62,7 +62,6 @@
   background-color: rgb(35, 36, 66, 0.8);
   opacity: 0;
   border-radius: 10px;
-  pointer-events: none;
   transition: opacity 1s ease-out;
 }
 .work-name button {
@@ -82,12 +81,10 @@
 .work-name__p p {
   text-align: center;
   font-size: var(--step--3);
-  color: var(--font-color);
   font-weight: 600;
 }
 .work:hover .work-name {
   opacity: 1;
-  pointer-events: auto;
 }
 .work:hover .work-name__p {
   transform: translateY(0);
@@ -129,7 +126,6 @@
   text-align: center;
   font-weight: 500;
   font-size: var(--step-1);
-  color: var(--font-color);
   background-image: linear-gradient(
     135deg,
     rgba(159, 75, 242, 1) 22%,
@@ -144,7 +140,6 @@
   align-items: center;
   padding: 10px;
   gap: 15px;
-  color: var(--font-color);
   font-size: var(--step-0);
 }
 .modal-img {
@@ -194,11 +189,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 .modal-link_logo {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+
   background-color: var(--main-accent-color);
   cursor: pointer;
 }
@@ -206,7 +202,6 @@
   z-index: 1;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   background-image: linear-gradient(
     135deg,
     rgba(159, 75, 242, 1) 22%,
@@ -218,7 +213,6 @@
   z-index: 2;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   background-color: var(--light-color);
 }
 .modal-link_logo img {
@@ -226,7 +220,6 @@
   z-index: 3;
   width: 30px;
   height: 30px;
-  object-fit: contain;
 }
 @media (max-width: 380px) {
   .work {
@@ -259,7 +252,6 @@
     width: 100%;
   }
 }
-
 @media (max-width: 500px) {
   .modal-content {
     flex-direction: column-reverse;
