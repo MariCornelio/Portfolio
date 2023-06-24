@@ -9,7 +9,6 @@
 .container-works > p {
   width: 100%;
   padding: 0.5rem;
-  text-align: center;
   font-size: var(--step-1);
   font-weight: 600;
   border-bottom: 1px solid var(--font-color);
@@ -79,7 +78,6 @@
   transition: transform 1s ease-out;
 }
 .work-name__p p {
-  text-align: center;
   font-size: var(--step--3);
   font-weight: 600;
 }
@@ -123,7 +121,6 @@
   width: 100%;
   padding: 8px;
   margin: 10px 0;
-  text-align: center;
   font-weight: 500;
   font-size: var(--step-1);
   background-image: linear-gradient(
@@ -139,7 +136,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  gap: 15px;
+  gap: 8px;
   font-size: var(--step-0);
 }
 .modal-img {
@@ -167,9 +164,6 @@
   background-color: var(--dark-opacity-color);
   padding: 5px;
   border-radius: 10px;
-}
-.modal-text__div p {
-  text-align: center;
 }
 .modal-text__div > p:first-child {
   border-bottom: 1px solid var(--font-color);
@@ -241,15 +235,13 @@
   .works > div:nth-child(even) {
     justify-content: center;
   }
-  .modal-content {
-    font-size: var(--step--1);
-  }
   .modal-img img {
     width: 180px;
   }
   .modal-text,
   .modal-img {
     width: 100%;
+    font-size: var(--step--1);
   }
 }
 @media (max-width: 500px) {
@@ -257,7 +249,7 @@
     flex-direction: column-reverse;
   }
 }
-@media (max-height: 620px) and (orientation: portrait) {
+@media (max-height: 640px) and (max-width: 500px) {
   .modal-img {
     display: none;
   }

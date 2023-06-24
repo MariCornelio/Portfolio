@@ -34,6 +34,9 @@ img {
   max-width: 100%;
   color: #132e65;
 }
+p {
+  text-align: center;
+}
 button {
   background-image: linear-gradient(
     135deg,
