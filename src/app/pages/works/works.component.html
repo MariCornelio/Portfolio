@@ -8,10 +8,10 @@
           <div class="work-name__p">
             <p>Kwai Store</p>
           </div>
-          <button (click)="onClick()"> Learn More</button>
+          <button (click)="onClick('val1')"> Learn More</button>
         </div>
       </div>
-      <div class="modal-works" [ngClass]="valid ? '.block' : 'none'">
+      <div class="modal-works" [ngClass]="valid1 ? '.block' : 'none'">
         <app-close></app-close>
         <section class="modal-container">
           <p>Kwai store</p>
@@ -23,7 +23,7 @@
               </p>
               <div class="modal-text__div">
                 <p> Technologies</p>
-                <p> Angular - Angular Material - Angular CLI - Typescript - Responsive - CSS - Git y GitHub - Http
+                <p> Angular - Angular Material - Angular CLI - Typescript - CSS - Git y GitHub - Http
                   Request - UX - Figma - Json-Server</p>
               </div>
               <div class="modal-link">
@@ -37,10 +37,8 @@
                     </div>
                   </div>
                 </a>
-
               </div>
             </div>
-
             <div class="modal-img">
               <img src="../../../assets/work-kwai.png" alt="kwai-store">
             </div>
@@ -49,6 +47,7 @@
         </section>
       </div>
     </div>
+
     <div>
       <div class="work" data-aos="zoom-in">
         <img src="../../../assets/work-burger.png" alt="burger-queen">
@@ -56,10 +55,48 @@
           <div class="work-name__p">
             <p>Burger Queen</p>
           </div>
-          <button> Learn More</button>
+          <button (click)="onClick('val2')"> Learn More</button>
         </div>
       </div>
+      <div class="modal-works" [ngClass]="valid2 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Burger Queen</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Application of a fast food restaurant for different areas of the premises (dining room, kitchen,
+                administration)
+              </p>
+              <p>Users and password : 123456</p>
+              <p>admin@gmail.com, chef1@gmail.com, waiter1@gmail.com</p>
+
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> Angular - Angular Material - Angular CLI - Typescript - CSS - Git y GitHub - Http
+                  Request - UX - Figma - Json-Server</p>
+              </div>
+              <div class="modal-link">
+                <p> View Site</p>
+                <a href="https://kwai-store.vercel.app/" target="_blank">
+                  <div class="modal-link_logo">
+                    <div>
+                      <div>
+                        <img src="../../../assets/link-external2.svg" alt="view-site">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-kwai.png" alt="kwai-store">
+            </div>
+          </div>
+
+        </section>
+      </div>
     </div>
+
     <div>
       <div class="work" data-aos="zoom-in">
         <img src="../../../assets/work-linkval.png" alt="linkval">
