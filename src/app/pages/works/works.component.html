@@ -23,8 +23,8 @@
               </p>
               <div class="modal-text__div">
                 <p> Technologies</p>
-                <p> Angular - Angular Material - Angular CLI - Typescript - CSS - Git y GitHub - Http
-                  Request - UX - Figma - Json-Server</p>
+                <p> Angular - Angular Material - Angular CLI - Typescript - CSS - HTML - Git y GitHub - Http
+                  Request - Figma - Json-Server</p>
               </div>
               <div class="modal-link">
                 <p> View Site</p>
@@ -72,12 +72,12 @@
 
               <div class="modal-text__div">
                 <p> Technologies</p>
-                <p> Angular - Angular Material - Angular CLI - Typescript - CSS - Git y GitHub - Http
-                  Request - UX - Figma - Json-Server</p>
+                <p> Angular - Jasmine - Karma - Typescript - CSS - HTML - Git y GitHub - Http
+                  Request - Figma - Json-Server - Json-auth - Toastr</p>
               </div>
               <div class="modal-link">
                 <p> View Site</p>
-                <a href="https://kwai-store.vercel.app/" target="_blank">
+                <a href="https://dev-003-burger-queen-api-client-iota.vercel.app/" target="_blank">
                   <div class="modal-link_logo">
                     <div>
                       <div>
@@ -89,7 +89,7 @@
               </div>
             </div>
             <div class="modal-img">
-              <img src="../../../assets/work-kwai.png" alt="kwai-store">
+              <img src="../../../assets/work-burger.png" alt="burger-queen">
             </div>
           </div>
 
@@ -104,11 +104,45 @@
           <div class="work-name__p">
             <p>Linkval</p>
           </div>
-          <button> Learn More</button>
+          <button (click)="onClick('val3')"> Learn More</button>
         </div>
       </div>
-      .
+      <div class="modal-works" [ngClass]="valid3 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Linkval</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Linkval is a library that allows you to read Markdown files to check the links they contain, provide
+                statistics and
+                check if they are valid or not, as well as provide a command line tool.
+              </p>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> NodeJS - Javascript - Jest - NPM - Git y GitHub - Inquirer - Table - Colors </p>
+              </div>
+              <div class="modal-link">
+                <p> View Site</p>
+                <a href="https://www.npmjs.com/package/linkval" target="_blank">
+                  <div class="modal-link_logo">
+                    <div>
+                      <div>
+                        <img src="../../../assets/link-external2.svg" alt="view-site">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-linkval.png" alt="Linkval">
+            </div>
+          </div>
+
+        </section>
+      </div>
     </div>
+
     <div>
       <div class="work" data-aos="zoom-in">
         <img src="../../../assets/work-devgram.png" alt="devgram">
@@ -116,10 +150,45 @@
           <div class="work-name__p">
             <p>Devgram</p>
           </div>
-          <button> Learn More</button>
+          <button (click)="onClick('val4')">Learn More</button>
         </div>
       </div>
+      <div class="modal-works" [ngClass]="valid4 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Devgram</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Devgram is a social networking application that aims to connect anyone interested in the technology
+                sector. You can
+                create, update or delete a post and much more.
+              </p>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> Javascript - Firebase - HTML - CSS - Jest - Git y GitHub - Figma</p>
+              </div>
+              <div class="modal-link">
+                <p> View Site</p>
+                <a href="https://devgram-app.netlify.app/" target="_blank">
+                  <div class="modal-link_logo">
+                    <div>
+                      <div>
+                        <img src="../../../assets/link-external2.svg" alt="view-site">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-devgram.png" alt="devgram">
+            </div>
+          </div>
+
+        </section>
+      </div>
     </div>
+
     <div>
       <div class="work" data-aos="zoom-in">
         <img src="../../../assets/work-mock-bq.png" alt="mock-server">
@@ -127,10 +196,43 @@
           <div class="work-name__p">
             <p>Burger Queen Mock Server</p>
           </div>
-          <button> Learn More</button>
+          <button (click)="onClick('val5')"> Learn More</button>
         </div>
       </div>
+      <div class="modal-works" [ngClass]="valid5 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Burger Queen Mock Server</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Mock server to make HTTP requests from the Burger Queen application.
+              </p>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> Javascript - NodeJS - Git y GitHub - Json Server - Json Auth </p>
+              </div>
+              <div class="modal-link">
+                <p> View Site</p>
+                <a href="https://burger-queen-mock-server.onrender.com/" target="_blank">
+                  <div class="modal-link_logo">
+                    <div>
+                      <div>
+                        <img src="../../../assets/link-external2.svg" alt="view-site">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-mock-bq.png" alt="burger-queen-mock">
+            </div>
+          </div>
+
+        </section>
+      </div>
     </div>
+
     <div>
       <div class="work" data-aos="zoom-in">
         <img src="../../../assets/work-ghiblipedia.png" alt="ghiblipedia">
@@ -138,10 +240,45 @@
           <div class="work-name__p">
             <p>Ghiblipedia</p>
           </div>
-          <button> Learn More</button>
+          <button (click)="onClick('val6')"> Learn More</button>
         </div>
       </div>
+      <div class="modal-works" [ngClass]="valid6 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Ghiblipedia</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>GhibliPedia is a Studio Ghibli animation website, where you can interact, see the total animations, see
+                their
+                characters, filter information and see the filmography of each animation.
+              </p>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> Javascript - JSON - HTML - CSS - JEST </p>
+              </div>
+              <div class="modal-link">
+                <p> View Site</p>
+                <a href="https://maricornelio.github.io/dataLovers-SG-MF/" target="_blank">
+                  <div class="modal-link_logo">
+                    <div>
+                      <div>
+                        <img src="../../../assets/link-external2.svg" alt="view-site">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-ghiblipedia.png" alt="Ghiblipedia">
+            </div>
+          </div>
+
+        </section>
+      </div>
     </div>
+
     <div>
       <div class="work" data-aos="zoom-in">
         <img src="../../../assets/work-mock-ks.png" alt="mock-server">
@@ -149,10 +286,43 @@
           <div class="work-name__p">
             <p>Kwai Store Mock Server</p>
           </div>
-          <button> Learn More</button>
+          <button (click)="onClick('val7')"> Learn More</button>
         </div>
       </div>
+      <div class="modal-works" [ngClass]="valid7 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Kwai Store Mock Server</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Mock server to make HTTP requests from the Kwai Store application.
+              </p>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> NodeJS - Javascript - Json server - NPM - Git - GitHub </p>
+              </div>
+              <div class="modal-link">
+                <p> View Site</p>
+                <a href="https://kwai-store-mock-server.onrender.com/" target="_blank">
+                  <div class="modal-link_logo">
+                    <div>
+                      <div>
+                        <img src="../../../assets/link-external2.svg" alt="view-site">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-mock-ks.png" alt="Kwai-store-mock">
+            </div>
+          </div>
+
+        </section>
+      </div>
     </div>
+
     <div>
       <div class="work" data-aos="zoom-in">
         <img src="../../../assets/work-gift.png" alt="gift-card">
@@ -160,8 +330,41 @@
           <div class="work-name__p">
             <p>Gift Card</p>
           </div>
-          <button> Learn More</button>
+          <button (click)="onClick('val8')"> Learn More</button>
         </div>
+      </div>
+      <div class="modal-works" [ngClass]="valid8 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Gift Card - Dream High</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Desktop application to validate the Gift Card of the company Dream High using the Luhn algorithm.
+              </p>
+              <p>For more validations use the card number (4137 8947 1175 5904) with any username.</p>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> Javascript - HTML - CSS </p>
+              </div>
+              <div class="modal-link">
+                <p> View Site</p>
+                <a href="https://maricornelio.github.io/DEV003-card-validation/" target="_blank">
+                  <div class="modal-link_logo">
+                    <div>
+                      <div>
+                        <img src="../../../assets/link-external2.svg" alt="view-site">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-gift.png" alt="GiftCard">
+            </div>
+          </div>
+
+        </section>
       </div>
     </div>
   </section>
