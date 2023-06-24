@@ -162,7 +162,7 @@
 }
 .modal-text__div {
   background-color: var(--dark-opacity-color);
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 10px;
 }
 .modal-text__div > p:first-child {
