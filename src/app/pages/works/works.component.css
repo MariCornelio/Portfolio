@@ -158,7 +158,7 @@
   flex-direction: column;
 }
 .modal-text > p {
-  margin: 0 5px 10px 5px;
+  margin: 0 5px 5px 5px;
 }
 .modal-text__div {
   background-color: var(--dark-opacity-color);
@@ -169,10 +169,16 @@
   border-bottom: 1px solid var(--font-color);
   padding-bottom: 5px;
 }
+.modal-link-container,
 .modal-link {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modal-link-container {
+  gap: 30px;
+}
+.modal-link {
   flex-direction: column;
 }
 .modal-link > p {
@@ -186,16 +192,15 @@
   border-radius: 50%;
 }
 .modal-link_logo {
-  width: 70px;
-  height: 70px;
-
+  width: 60px;
+  height: 60px;
   background-color: var(--main-accent-color);
   cursor: pointer;
 }
 .modal-link_logo > div {
   z-index: 1;
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   background-image: linear-gradient(
     135deg,
     rgba(159, 75, 242, 1) 22%,
@@ -205,15 +210,15 @@
 }
 .modal-link_logo > div > div {
   z-index: 2;
-  width: 50px;
-  height: 50px;
+  width: 38px;
+  height: 38px;
   background-color: var(--light-color);
 }
 .modal-link_logo img {
   position: relative;
   z-index: 3;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 }
 @media (max-width: 380px) {
   .work {
@@ -249,7 +254,15 @@
     flex-direction: column-reverse;
   }
 }
-@media (max-height: 640px) and (max-width: 500px) {
+@media (max-height: 620px) and (max-width: 540px) {
+  .modal-img {
+    display: none;
+  }
+}
+@media (max-height: 420px) {
+  .modal-text__div {
+    display: none;
+  }
   .modal-img {
     display: none;
   }
