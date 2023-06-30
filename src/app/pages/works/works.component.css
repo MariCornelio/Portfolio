@@ -6,6 +6,7 @@
   flex-direction: column;
   color: var(--font-color);
 }
+
 .container-works > p {
   width: 100%;
   padding: 0.5rem;
@@ -91,6 +92,8 @@
   transform: translateY(0);
 }
 .modal-works {
+  max-width: 2000px;
+  margin: auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -254,7 +257,7 @@
     flex-direction: column-reverse;
   }
 }
-@media (max-height: 620px) and (max-width: 540px) {
+@media (max-height: 640px) and (max-width: 540px) {
   .modal-img {
     display: none;
   }
