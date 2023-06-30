@@ -20,9 +20,14 @@ export class WorksComponent implements OnInit {
   valid7: boolean = false;
   valid8: boolean = false;
 
+  background: boolean = false;
+
   ngOnInit(): void {
     AOS.init();
     window.addEventListener('load', AOS.refresh);
+    if (location.pathname === '/works') {
+      this.background = true;
+    }
     this.sharedModalService.$modal1.subscribe((value) => (this.valid1 = value));
     this.sharedModalService.$modal2.subscribe((value) => (this.valid2 = value));
     this.sharedModalService.$modal3.subscribe((value) => (this.valid3 = value));

@@ -1,7 +1,5 @@
 canvas {
   display: block;
-
-  /* vertical-align: bottom; */
 } /* ---- particles.js container ---- */
 #particles-js {
   display: flex;
@@ -18,7 +16,6 @@ canvas {
 .home-container {
   position: absolute;
   z-index: 10;
-  /* background-color: aqua; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,11 +24,11 @@ canvas {
 .home-content {
   font-weight: 700;
   color: var(--font-color);
-  font-size: var(--step-3);
   text-align: center;
 }
 .home-content p {
   margin: 0.6rem;
+  font-size: var(--step-3);
 }
 .home-content > p:first-child {
   font-size: var(--step-4);
@@ -39,6 +36,7 @@ canvas {
 }
 .home-content button {
   margin-top: 2rem;
+  font-size: var(--step-0);
 }
 .home-image > div {
   position: relative;
@@ -90,7 +88,6 @@ canvas {
   background-color: var(--main-color);
   position: relative;
   bottom: 0;
-  /* color: #0b3a98; */
 }
 .home-others p {
   font-weight: 700;
@@ -103,7 +100,6 @@ canvas {
     background-position: 0 110%;
   }
 }
-
 @media (max-width: 650px) {
   .home-container {
     flex-direction: column;
