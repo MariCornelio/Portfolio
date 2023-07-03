@@ -9,7 +9,7 @@
   --color-gradient-2: #7e5ef2;
   --color-gradient-3: #7292f2;
   --dark-color: #131428;
-  --light-color: #343865;
+  --light-color: #242c86;
   --dark-opacity-color: rgb(19, 20, 40, 0.5);
   --light-opacity-color: rgb(52, 56, 101, 0.7);
 
@@ -61,6 +61,8 @@ textarea {
   margin-bottom: 15px;
 }
 button {
+  margin: 5px;
+  padding: 12px 18px;
   background-image: linear-gradient(
     135deg,
     rgba(159, 75, 242, 1) 22%,
@@ -68,7 +70,6 @@ button {
     rgba(114, 146, 242, 1) 78%
   );
   border: none;
-  padding: 12px 18px;
   border: 1px solid var(--dark-color);
   border-radius: 28px;
   font-size: var(--step--1);
@@ -76,6 +77,7 @@ button {
   color: var(--font-color);
   cursor: pointer;
 }
+
 .bg {
   background-image: url("assets/polygon.svg");
   background-color: var(--main-color);

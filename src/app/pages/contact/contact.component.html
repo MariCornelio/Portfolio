@@ -2,14 +2,59 @@
   <p>Contact</p>
   <section class="contact">
     <div class="contact-message">
-      <form class="contact-message_form">
+      <form class="contact-message_form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div>
-          <input type="text" name="name" placeholder="Name" data-aos="zoom-in-up">
-          <input type="text" name="email" placeholder="Email" data-aos="zoom-in-up">
+          <div>
+            <input type="text" formControlName="name" name="name" placeholder="Name" data-aos="zoom-in-up" required>
+            <div class="contact-message_error"
+              *ngIf="contactForm.controls['name'].hasError('pattern') && contactForm.controls['name']">
+              <img src="../../../assets/contact-error.svg" alt="">
+              <span>This field only accepts letters and spaces.</span>
+            </div>
+          </div>
+          <div>
+            <input type="email" formControlName="email" name="email" placeholder="Email" data-aos="zoom-in-up" required>
+            <div class="contact-message_error"
+              *ngIf="contactForm.controls['email'].hasError('pattern') && contactForm.controls['email']">
+              <img src="../../../assets/contact-error.svg" alt="">
+              <span>Please enter a valid email address.</span>
+
+            </div>
+          </div>
         </div>
-        <input type="text" name="subject" placeholder="Subject" data-aos="zoom-in-up">
-        <textarea rows="6" placeholder="Message" data-aos="zoom-in-up"></textarea>
-        <button data-aos="zoom-in">Send Message</button>
+        <div contact-error_landscape>
+          <div class="contact-message_error2"
+            *ngIf="contactForm.controls['name'].hasError('pattern') && contactForm.controls['name']">
+            <img src="../../../assets/contact-error.svg" alt="">
+            <span>This field only accepts letters and spaces.</span>
+          </div>
+          <div class="contact-message_error2"
+            *ngIf="contactForm.controls['email'].hasError('pattern') && contactForm.controls['email']">
+            <img src="../../../assets/contact-error.svg" alt="">
+            <span>Please enter a valid email address.</span>
+
+          </div>
+        </div>
+        <input type="text" formControlName="subject" name="subject" placeholder="Subject" data-aos="zoom-in-up"
+          required>
+        <div class="contact-message_error" *ngIf="contactForm.controls['subject'].hasError('subject')">
+          <img src="../../../assets/contact-error.svg" alt="">
+          <span>This field is required</span>
+
+        </div>
+        <textarea formControlName="message" name="message" rows="6" placeholder="Message" data-aos="zoom-in-up"
+          required></textarea>
+        <div class="contact-message_error"
+          *ngIf="contactForm.controls['message'].hasError('pattern') && contactForm.controls['message']">
+          <img src="../../../assets/contact-error.svg" alt="">
+          <span>This field exceeds the maximum limit of 255 characters</span>
+
+        </div>
+        <div class="contact-loader" [ngClass]="{'none':displayNone}">
+          <img src="../../../assets/three-dots.svg" alt="loader">
+        </div>
+        <button class="contact-message_form-button" type="submit" data-aos="zoom-in"
+          [disabled]="!contactForm.valid || isButtonDisabled">Send Message</button>
       </form>
     </div>
     <div class="contact-img" data-aos="flip-up">

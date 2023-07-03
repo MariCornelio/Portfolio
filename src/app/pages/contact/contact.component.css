@@ -32,16 +32,55 @@
   align-items: center;
   flex-direction: column;
 }
-
 .contact-message_form > div {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.contact-message_form > div > div {
+  width: 100%;
+}
+.contact-message_form .contact-message_form-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.contact-message_error,
+.contact-message_error2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+  font-size: var(--step--2);
+  color: var(--color-gradient-3);
+}
+.contact-message_error2 {
+  justify-content: center;
+}
+.contact-message_error:nth-child(1),
+.contact-message_error:nth-child(2) {
+  display: none;
+}
+.contact-message_error img,
+.contact-message_error2 img {
+  align-self: flex-start;
+  width: 15px;
+  height: 15px;
+}
 
 .contact-message {
   width: 50%;
+}
+
+.contact-message_form .contact-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+.contact-message_form .contact-loader.none {
+  display: none;
 }
 .contact-img {
   width: 50%;
@@ -112,9 +151,16 @@
   .contact > div {
     width: 100%;
   }
-  .contact-message_form > div {
+  .contact-message_form > div:not(.contact-message_error, .contact-loader) {
     width: 100%;
     flex-direction: column;
+  }
+  .contact-message_error:nth-child(1),
+  .contact-message_error:nth-child(2) {
+    display: flex;
+  }
+  .contact-message_error2 {
+    display: none;
   }
 }
 
@@ -122,5 +168,8 @@
   .contact *,
   .contact-footer * {
     font-size: var(--step--1);
+  }
+  span {
+    font-size: var(--step--2);
   }
 }
