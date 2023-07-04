@@ -33,7 +33,7 @@ body {
 }
 img {
   max-width: 100%;
-  color: #132e65;
+  height: auto;
 }
 p {
   text-align: center;
