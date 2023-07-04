@@ -50,11 +50,20 @@
           <span>This field exceeds the maximum limit of 255 characters</span>
 
         </div>
-        <div class="contact-loader" [ngClass]="{'none':displayNone}">
+        <div class="contact-loader" [ngClass]="{'none':noneLoader}">
           <img src="../../../assets/three-dots.svg" alt="loader">
         </div>
         <button class="contact-message_form-button" type="submit" data-aos="zoom-in"
           [disabled]="!contactForm.valid || isButtonDisabled">Send Message</button>
+        <div class="contact-error-send" [ngClass]="{'none':noneErrorSend}">
+          <div>
+            <img src="../../../assets/close.svg" alt="close" (click)="onCloseError()">
+          </div>
+          <div>
+            <img src="../../../assets/contact-error.svg" alt="error">
+            <p>There was an error trying to send your message. Please try again</p>
+          </div>
+        </div>
       </form>
     </div>
     <div class="contact-img" data-aos="flip-up">

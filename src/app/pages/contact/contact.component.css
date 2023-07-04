@@ -82,6 +82,38 @@
 .contact-message_form .contact-loader.none {
   display: none;
 }
+.contact-error-send {
+  padding: 5px;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: var(--light-opacity-color);
+}
+
+.contact-message_form .contact-error-send.none {
+  display: none;
+}
+.contact-error-send p {
+  margin: 0 5px;
+  font-size: var(--step--2);
+}
+.contact-error-send > div {
+  /* margin: 5px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-error-send > div:first-child {
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--font-color);
+}
+.contact-error-send div:last-child img {
+  width: 20px;
+}
+.contact-error-send div:first-child img {
+  width: 25px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
 .contact-img {
   width: 50%;
   padding: 5px;

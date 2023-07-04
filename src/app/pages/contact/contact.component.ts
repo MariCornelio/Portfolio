@@ -11,7 +11,8 @@ import { FormService } from 'src/app/shared/service/form.service';
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   background: boolean = false;
-  displayNone: boolean = true;
+  noneLoader: boolean = true;
+  noneErrorSend: boolean = true;
   isButtonDisabled: boolean = false;
   constructor(private builder: FormBuilder, private formService: FormService) {
     this.contactForm = this.builder.group({
@@ -43,20 +44,25 @@ export class ContactComponent implements OnInit {
     }
   }
   onSubmit(): void {
-    this.isButtonDisabled = true;
     const formData = this.contactForm.value;
-    this.displayNone = false;
+    this.isButtonDisabled = true;
+    this.noneLoader = false;
+    this.noneErrorSend = true;
     console.log(formData);
     this.formService.sendMessage(formData).subscribe({
       next: (resp) => {
         // console.log(resp);
         this.contactForm.reset();
-        this.displayNone = true;
+        this.noneLoader = true;
         this.isButtonDisabled = false;
       },
-      error: (error) => {
-        console.log(error);
+      error: () => {
+        this.noneLoader = true;
+        this.noneErrorSend = false;
       },
     });
+  }
+  onCloseError() {
+    this.noneErrorSend = true;
   }
 }
