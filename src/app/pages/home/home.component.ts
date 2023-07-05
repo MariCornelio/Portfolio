@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  HostListener,
+  OnInit,
+} from '@angular/core';
+import { ModalService } from 'src/app/shared/service/modal.service';
 declare let particlesJS: any;
 
 // import * as AOS from 'aos';
@@ -9,9 +15,11 @@ declare let particlesJS: any;
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private modalService: ModalService,
+    private changeDetectorRef: ChangeDetectorRef
+  ) {}
   ngOnInit(): void {
-    console.log('hola');
     // AOS.init();
     // window.addEventListener('load', AOS.refresh);
     particlesJS('particles-js', {
@@ -67,5 +75,10 @@ export class HomeComponent implements OnInit {
       },
       retina_detect: true,
     });
+  }
+  @HostListener('click')
+  onClick2() {
+    this.modalService.$checkedHamburger.emit(false);
+    this.changeDetectorRef.markForCheck();
   }
 }

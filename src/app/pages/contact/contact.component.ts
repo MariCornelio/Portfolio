@@ -1,7 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import AOS from 'aos';
 import { FormService } from 'src/app/shared/service/form.service';
+import { ModalService } from 'src/app/shared/service/modal.service';
 
 @Component({
   selector: 'app-contact',
@@ -14,12 +22,21 @@ export class ContactComponent implements OnInit {
   noneLoader: boolean = true;
   noneErrorSend: boolean = true;
   isButtonDisabled: boolean = false;
-  constructor(private builder: FormBuilder, private formService: FormService) {
+  @ViewChild('headerInput') headerInputElement?: ElementRef;
+  constructor(
+    private builder: FormBuilder,
+    private formService: FormService,
+    private modalService: ModalService,
+    private changeDetectorRef: ChangeDetectorRef
+  ) {
     this.contactForm = this.builder.group({
       // Inicializando atributo value ="" y asignando validaciones para cada input
       name: [
-        null,
-        [Validators.required, Validators.pattern('^[A-Za-zÑñÁáÉéÍíÓóÚúÜüs]+$')],
+        '',
+        [
+          Validators.required,
+          Validators.pattern('^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\\s]+$'),
+        ],
       ],
       email: [
         '',
@@ -59,10 +76,23 @@ export class ContactComponent implements OnInit {
       error: () => {
         this.noneLoader = true;
         this.noneErrorSend = false;
+        this.isButtonDisabled = false;
       },
     });
   }
   onCloseError() {
     this.noneErrorSend = true;
+  }
+
+  // onClickHamburger() {
+  //   console.log('contact');
+  //   this.modalService.checkedHamburger();
+  //   this.modalService.isChecked$.subscribe((value) => console.log(value));
+  // }
+
+  @HostListener('click')
+  onClick() {
+    this.modalService.$checkedHamburger.emit(false);
+    this.changeDetectorRef.markForCheck();
   }
 }

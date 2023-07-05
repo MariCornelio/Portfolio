@@ -2,9 +2,10 @@
 
 
 
-  <div class="container">
+  <div class="container" (click)="onClickLabel()">
 
-    <input type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden">
+    <input type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden header-input" #headerInput
+      [checked]="isCkecked" [disabled]="true">
     <label for="checkbox2">
       <div class="hamburger hamburger2">
         <span class="bar bar1"></span>
@@ -13,6 +14,11 @@
         <span class="bar bar4"></span>
       </div>
     </label>
+    <nav class="header-nav_films">
+      <a [routerLink]="['/']" class="header-nav_item">Home</a>
+      <a [routerLink]="['/works']" class="header-nav_item">Works</a>
+      <a [routerLink]="['/contact']" class="header-nav_item">Contact</a>
+    </nav>
 
   </div>
 
