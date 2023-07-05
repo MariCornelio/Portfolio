@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  HostListener,
+  OnInit,
+} from '@angular/core';
 import AOS from 'aos';
 import { ModalService } from 'src/app/shared/service/modal.service';
 
@@ -8,7 +13,10 @@ import { ModalService } from 'src/app/shared/service/modal.service';
   styleUrls: ['./works.component.css'],
 })
 export class WorksComponent implements OnInit {
-  constructor(private sharedModalService: ModalService) {}
+  constructor(
+    private sharedModalService: ModalService,
+    private changeDetectorRef: ChangeDetectorRef
+  ) {}
   // @ViewChild('icon') icon!: ElementRef;
   // iconClass!: string;
   valid1: boolean = false;
@@ -71,5 +79,10 @@ export class WorksComponent implements OnInit {
       this.valid8 = true;
       this.sharedModalService.$modal8.emit(true);
     }
+  }
+  @HostListener('click')
+  onClick2() {
+    this.sharedModalService.$checkedHamburger.emit(false);
+    this.changeDetectorRef.markForCheck();
   }
 }

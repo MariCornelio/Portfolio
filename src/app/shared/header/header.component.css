@@ -1,20 +1,4 @@
-:root {
-  --main-color: #1e1f3d;
-  --second-color: #15152d;
-  --font-color: #ededf5;
-  --main-accent-color: #232442;
-  --color-gradient-1: #9f4bf2;
-  --color-gradient-2: #7e5ef2;
-  --color-gradient-3: #7292f2;
-  --dark-color: #131428;
-  --light-color: #343865;
-  --dark-opacity-color: rgb(19, 20, 40, 0.5);
-  --light-opacity--color: rgb(52, 56, 101, 0.7);
-}
 .header-container {
-  /* position: sticky;
-  top: 0;
-  z-index: 999; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -23,7 +7,6 @@
   background-color: var(--main-color);
 }
 
-/* GENERAL STYLES */
 .visuallyHidden {
   position: absolute;
   overflow: hidden;
@@ -51,6 +34,9 @@
 }
 .container * {
   cursor: pointer;
+  font-size: var(--step-0);
+  color: var(--font-color);
+  font-weight: 600;
 }
 .hamburger {
   /* margin: 0 auto; */
@@ -88,8 +74,6 @@
   bottom: 0;
 }
 
-/* HAMBURGER 2 */
-
 .checkbox2:checked + label > .hamburger2 > .bar1 {
   transform: translateX(40px);
   background-color: transparent;
@@ -107,13 +91,67 @@
   transform: translateX(-40px);
   background-color: transparent;
 }
+/* ***************************************** */
+.header-nav_films {
+  width: 50%;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  position: absolute;
+  z-index: 20;
+  top: 3rem;
+  right: -50%;
+  transition: right 1s, opacity 1s;
+}
+
+.header-nav_item {
+  width: 100%;
+  padding: 5vh;
+  position: relative;
+  border-bottom: 1px solid var(--font-color);
+  background-color: rgb(21, 21, 45);
+  text-decoration: none;
+  text-align: center;
+}
+.header-nav_item::before {
+  width: 100%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    135deg,
+    rgba(159, 75, 242, 1) 22%,
+    rgba(126, 94, 242, 1) 52%,
+    rgba(114, 146, 242, 1) 78%
+  );
+  border-radius: 4px;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+.header-nav_item:hover::before {
+  transform: scale(1);
+}
+.header-nav_item:nth-child(3) {
+  border: none;
+}
+.header-nav_item:hover {
+  background-color: var(--main-accent-color);
+  border: none;
+}
+.header-input:checked ~ .header-nav_films {
+  right: 35px;
+  opacity: 1;
+}
+
 
 @media (max-width: 650px) {
   .container {
     width: 35px;
   }
   .hamburger {
-    /* margin: 0 auto; */
     margin: 5px;
     width: 25px;
     height: 25px;
