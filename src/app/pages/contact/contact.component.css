@@ -1,11 +1,12 @@
 .container-contact {
   width: 100%;
+  margin-top: 3rem;
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   color: var(--font-color);
-  padding-bottom: 20px;
 }
 
 .container-contact > p {

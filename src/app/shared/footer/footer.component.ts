@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalService } from '../service/modal.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private modalService: ModalService,private changeDetectorRef:ChangeDetectorRef) {}
+  @HostListener('click')
+  onClick2() {
+    this.modalService.$checkedHamburger.emit(false);
+    this.changeDetectorRef.markForCheck();
+  }
   onClick(value: string) {
     if (value === 'home') {
       this.router.navigate(['']);
