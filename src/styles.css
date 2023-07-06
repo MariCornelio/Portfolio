@@ -39,6 +39,10 @@ p {
   text-align: center;
   font-size: var(--step-0);
 }
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
 input,
 textarea {
   width: 100%;

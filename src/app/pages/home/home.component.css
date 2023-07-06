@@ -7,7 +7,8 @@ canvas {
   align-items: center;
   position: relative;
   width: 100%;
-  height: calc(100vh - 3rem);
+  /* height: calc(100vh - 3rem); */
+  height: 100vh;
   background-color: var(--main-color);
   background-repeat: no-repeat;
   background-size: cover;
