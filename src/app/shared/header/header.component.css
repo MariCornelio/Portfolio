@@ -106,7 +106,7 @@
   position: fixed;
   z-index: 20;
   top: 3rem;
-  right: -50%;
+  right: -100%;
   transition: right 1s, opacity 1s;
   background-color: var(--main-color);
 }
