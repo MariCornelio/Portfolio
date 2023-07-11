@@ -13,6 +13,12 @@
   color: var(--font-color);
   margin: 10px 0;
 }
+
+.footer-container > img {
+  width: 150px;
+  position: relative;
+  right: 17px;
+}
 .footer-container > div {
   display: flex;
   justify-content: center;
