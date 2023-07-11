@@ -1,13 +1,12 @@
 canvas {
   display: block;
-} /* ---- particles.js container ---- */
+}
 #particles-js {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
-  /* height: calc(100vh - 3rem); */
   height: 100vh;
   background-color: var(--main-color);
   background-repeat: no-repeat;
@@ -15,6 +14,7 @@ canvas {
   background-position: 50% 50%;
 }
 .home-container {
+  margin-top: 3rem;
   position: absolute;
   z-index: 10;
   display: flex;
@@ -105,6 +105,11 @@ canvas {
   .home-container {
     flex-direction: column;
   }
+  .home-image {
+    display: none;
+  }
+}
+@media (max-height: 450px) {
   .home-image {
     display: none;
   }
