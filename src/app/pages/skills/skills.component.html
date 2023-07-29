@@ -1,0 +1,219 @@
+<article class="container-skills" [ngClass]="{'bg':background}">
+  <p>My skills</p>
+  <section class="skills">
+    <div class="skills-text">
+      <p>I am passionate about web development and mathematics with a passion for problem solving and creating engaging
+        and
+        functional web experiences.
+      </p>
+      <p>My background in mathematics has provided me with analytical and logical thinking skills, allowing me to
+        address
+        developmental challenges efficiently and effectively.</p>
+
+      <p>
+        My main focus is ensuring that websites and applications are responsive and adapt to different devices,
+        providing
+        an
+        optimal user experience on mobile phones, tablets and desktop computers.
+        Also, implementing unit tests is important to me to ensure the quality and functionality of my projects.
+      </p>
+
+      <p>
+        I like to learn new technologies and keep up to date in this dynamic field. Contact me to continue facing new
+        challenges
+        and contribute to the development of innovative and high-quality web projects.
+      </p>
+    </div>
+    <div class="skills-img">
+      <div>
+        <div class="bg-gradient">
+          <img src="../../../assets/skills.webp" alt="skills">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="skills-link-container">
+    <div class="skills-link" (click)="onClick()">
+      <p> View Skills</p>
+      <div class="skills-link_logo">
+        <img src="../../../assets/down-arrow.svg" alt="view-skills" *ngIf="router==='/skills'"
+          [ngClass]="{'skills-rotation':rotation}">
+        <img src="../../../assets/arrow-right1.svg" alt="view-skills" *ngIf="router==='/'">
+      </div>
+    </div>
+    <div class="skills-art" [ngClass]="{'skills-none':skillsNone}">
+      <div>
+        <div class="skills-art_div skills-left">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Angular</p>
+        </div>
+        <div class="bg-diagonal1 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">React</p>
+        </div>
+        <div class="bg-line-right skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Typescript</p>
+        </div>
+        <div class="bg-diagonal2 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-left">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Javascript</p>
+        </div>
+        <div class="bg-diagonal1 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">NodeJS</p>
+        </div>
+        <div class="bg-diagonal2 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-left">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Firebase</p>
+        </div>
+        <div class="bg-line-left skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-left">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Insomnia</p>
+        </div>
+        <div class="bg-diagonal1 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Jest</p>
+        </div>
+        <div class="bg-line-right skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Jasmine</p>
+        </div>
+        <div class="bg-diagonal2 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-left">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Git - GitHub</p>
+        </div>
+        <div class="bg-diagonal1 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Trello</p>
+        </div>
+        <div class="bg-diagonal2 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+
+      <div>
+        <div class="skills-art_div skills-left">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Figma</p>
+        </div>
+        <div class="bg-line-left skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-left">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">CSS</p>
+        </div>
+        <div class="bg-diagonal1 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">HTML</p>
+        </div>
+        <div class="bg-line-right skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">C++</p>
+        </div>
+        <div class="bg-diagonal2 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-left">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Matlab</p>
+        </div>
+        <div class="bg-diagonal1 skills-background" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+      <div>
+        <div class="skills-art_div skills-right skills-row-reverse">
+          <div class="skills-circle" data-aos="zoom-in">
+            <div class="bg-gradient"></div>
+          </div>
+          <p data-aos="zoom-in">Látex</p>
+        </div>
+        <div class=" skills-background-end" data-aos="zoom-in" data-aos-delay="300">
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

@@ -11,6 +11,7 @@ import { WorksComponent } from './pages/works/works.component';
 import { CloseComponent } from './shared/close/close.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { SkillsComponent } from './pages/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     CloseComponent,
     ContactComponent,
     FooterComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,

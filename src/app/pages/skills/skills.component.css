@@ -1,0 +1,221 @@
+.bg-gradient {
+  background-image: linear-gradient(
+    135deg,
+    rgba(159, 75, 242, 1) 22%,
+    rgba(126, 94, 242, 1) 52%,
+    rgba(114, 146, 242, 1) 78%
+  );
+}
+.container-skills .skills-none {
+  display: none;
+}
+.skills-rotation {
+  transform: rotate(180deg);
+  transition: transform 1s ease;
+}
+.container-skills {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--font-color);
+}
+.container-skills > p {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: var(--step-1);
+  font-weight: 600;
+  border-bottom: 1px solid var(--font-color);
+  border-top: 1px solid var(--font-color);
+  background-color: var(--main-color);
+}
+.skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.skills p {
+  text-align: left;
+  background-color: var(--main-color);
+}
+
+.skills-text {
+  width: 50%;
+  padding-left: 15px;
+}
+.skills-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+.skills-img img {
+  object-fit: cover;
+}
+
+.skills-img * {
+  border-radius: 10px;
+}
+.skills-img > div {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--main-accent-color);
+  box-shadow: 0px 15px 10px 0px var(--dark-opacity-color),
+    0px -8px 10px 0px var(--light-opacity-color);
+}
+.skills-img > div > div {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+.skills-link-container,
+.skills-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border-top: 2px solid var(--dark-opacity-color);
+  border-left: 1px solid var(--dark-opacity-color);
+  border-bottom: 2px solid var(--light-opacity-color);
+  border-right: 1px solid var(--light-opacity-color);
+}
+.skills-link-container {
+  margin: 30px 0;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(21, 21, 45, 0.6);
+}
+.skills-link {
+  justify-content: space-between;
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: var(--second-color);
+}
+.skills-link_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+.skills-link_logo img {
+  transition: transform 1s ease;
+}
+.skills-art {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skills-art > div {
+  position: relative;
+}
+.skills-background {
+  width: 180px;
+  height: 180px;
+}
+.skills-background-end {
+  width: 180px;
+  height: 80px;
+}
+.skills-art_div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+.skills-art_div > p {
+  margin: 0;
+}
+.skills-pr {
+  position: relative;
+  top: -10px;
+}
+.skills-row-reverse {
+  flex-direction: row-reverse;
+}
+.skills-circle {
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--font-color);
+  border-radius: 50%;
+}
+.skills-circle div {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.skills-left {
+  left: -10px;
+}
+.skills-right {
+  right: -10px;
+}
+.bg-diagonal1 {
+  background: linear-gradient(
+    45deg,
+    transparent 49.8%,
+    #ededf5 49.8%,
+    #ededf5 50.1%,
+    transparent 50.1%
+  );
+}
+.bg-diagonal2 {
+  background: linear-gradient(
+    -45deg,
+    transparent 49.8%,
+    #ededf5 49.8%,
+    #ededf5 50.1%,
+    transparent 50.1%
+  );
+}
+.bg-line-right {
+  background: linear-gradient(
+    90deg,
+    transparent 99.4%,
+    #ededf5 99.4%,
+    #ededf5 100%
+  );
+}
+.bg-line-left {
+  background: linear-gradient(
+    90deg,
+    #ededf5 0%,
+    #ededf5 0.6%,
+    transparent 0.6%
+  );
+}
+.skills-art_circle > p {
+  position: absolute;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .skills {
+    flex-direction: column-reverse;
+  }
+  .skills-text,
+  .skills-img {
+    width: 100%;
+  }
+}
