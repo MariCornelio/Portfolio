@@ -3,6 +3,63 @@
   <section class="works">
     <div>
       <div class="work" data-aos="zoom-in-right">
+        <img src="../../../assets/work-portfolio.png" alt="portfolio-mari-cornelio">
+        <div class="work-name">
+          <div class="work-name__p">
+            <p>Portfolio</p>
+          </div>
+          <button (click)="onClick('val9')"> Learn More</button>
+        </div>
+      </div>
+      <div class="modal-works" [ngClass]="valid9 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Portfolio</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Portfolio of projects with different technologies, skills and contact.
+              </p>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> Angular - Typescript - API Rest - CSS - HTML - Git - AOS - ParticleJS</p>
+              </div>
+              <div class="modal-link-container">
+                <div class="modal-link">
+                  <p> View Site</p>
+                  <a href="https://maricornelio.vercel.app/" target="_blank">
+                    <div class="modal-link_logo">
+                      <div>
+                        <div>
+                          <img src="../../../assets/link-external2.svg" alt="view-site">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="modal-link">
+                  <p> Repository</p>
+                  <a href="https://github.com/MariCornelio/Portfolio" target="_blank">
+                    <div class="modal-link_logo">
+                      <div>
+                        <div>
+                          <img src="../../../assets/github-logo.svg" alt="view-site">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-portfolio.png" alt="portfolio-mari-cornelio">
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+    <div>
+      <div class="work" data-aos="zoom-in-right">
         <img src="../../../assets/work-kwai.png" alt="kwai-store">
         <div class="work-name">
           <div class="work-name__p">

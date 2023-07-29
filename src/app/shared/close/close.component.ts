@@ -17,5 +17,6 @@ export class CloseComponent {
     this.sharedModalService.$modal6.emit(false);
     this.sharedModalService.$modal7.emit(false);
     this.sharedModalService.$modal8.emit(false);
+    this.sharedModalService.$modal9.emit(false);
   }
 }
