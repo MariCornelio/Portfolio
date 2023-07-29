@@ -27,6 +27,10 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['']);
       window.scrollTo({ top: 0 });
     }
+    if (value === 'skills') {
+      this.router.navigate(['skills']);
+      window.scrollTo({ top: 0 });
+    }
     if (value === 'works') {
       this.router.navigate(['works']);
       window.scrollTo({ top: 0 });

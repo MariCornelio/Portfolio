@@ -8,7 +8,11 @@ import { ModalService } from '../service/modal.service';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  constructor(private router: Router, private modalService: ModalService,private changeDetectorRef:ChangeDetectorRef) {}
+  constructor(
+    private router: Router,
+    private modalService: ModalService,
+    private changeDetectorRef: ChangeDetectorRef
+  ) {}
   @HostListener('click')
   onClick2() {
     this.modalService.$checkedHamburger.emit(false);
@@ -17,6 +21,10 @@ export class FooterComponent {
   onClick(value: string) {
     if (value === 'home') {
       this.router.navigate(['']);
+      window.scrollTo({ top: 0 });
+    }
+    if (value === 'skills') {
+      this.router.navigate(['skills']);
       window.scrollTo({ top: 0 });
     }
     if (value === 'works') {

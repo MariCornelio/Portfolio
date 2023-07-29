@@ -124,7 +124,7 @@
 
 .header-nav_item {
   width: 100%;
-  padding: 5vh;
+  padding: 3vh;
   flex-grow: 1;
   position: relative;
   border-bottom: 1px solid var(--font-color);
