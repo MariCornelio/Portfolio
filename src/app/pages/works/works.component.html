@@ -1,8 +1,77 @@
 <article class="container-works" [ngClass]="{'bg':background}">
   <p>Works</p>
   <section class="works">
+    <!-- Inicio de seccion especial por ser para una empresa (se comenta una parte) -->
     <div>
       <div class="work" data-aos="zoom-in-right">
+        <img src="../../../assets/work-samishop.png" alt="samishop-mari-cornelio">
+        <div class="work-name">
+          <div class="work-name__p">
+            <p>Samishop</p>
+          </div>
+          <button (click)="onClick('val10')"> Learn More</button>
+        </div>
+      </div>
+      <div class="modal-works" [ngClass]="valid10 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Samishop</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>A startup focused on developing virtual stores and custom e-commerce platforms.
+              </p>
+              <ul>
+                <li>Implemented responsive features and interfaces for a virtual store platform, enhancing the
+                  experience
+                  for both
+                  administrators and customers in e-commerce environments.</li>
+
+                <li>Collaborated on the development of web components for Latina’s website, specifically on features
+                  related to the purchase
+                  process of the Gran Chef Famosos recipe book.</li>
+              </ul>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> React - Qwik - Typescript - Framework 7 - AWS - Azure DevOps</p>
+              </div>
+              <!-- <div class="modal-link-container">
+                <div class="modal-link">
+                  <p> View Site</p>
+                  <a href="https://maricornelio.vercel.app/" target="_blank">
+                    <div class="modal-link_logo">
+                      <div>
+                        <div>
+                          <img src="../../../assets/link-external2.svg" alt="view-site">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="modal-link">
+                  <p> Repository</p>
+                  <a href="https://github.com/MariCornelio/Portfolio" target="_blank">
+                    <div class="modal-link_logo">
+                      <div>
+                        <div>
+                          <img src="../../../assets/github-logo.svg" alt="view-site">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-samishop.png" alt="portfolio-mari-cornelio">
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+    <!-- Fin de seccion especial por ser para una empresa -->
+    <div>
+      <div class="work" data-aos="zoom-in-left">
         <img src="../../../assets/work-portfolio.png" alt="portfolio-mari-cornelio">
         <div class="work-name">
           <div class="work-name__p">
