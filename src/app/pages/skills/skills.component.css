@@ -81,6 +81,22 @@
   width: 100%;
   padding: 10px;
 }
+
+.skills-badges {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.skills-badges-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--font-color);
+  border-top: 1px solid var(--font-color);
+}
+.skills-badges-container img {
+  max-width: 120px;
+}
 .skills-link-container,
 .skills-link {
   width: 100%;
