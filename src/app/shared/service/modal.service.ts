@@ -15,6 +15,8 @@ export class ModalService {
   $modal8 = new EventEmitter<boolean>();
   $modal9 = new EventEmitter<boolean>();
   $modal10 = new EventEmitter<boolean>();
+  $modal11 = new EventEmitter<boolean>();
+  $modal12 = new EventEmitter<boolean>();
 
   $checkedHamburger = new EventEmitter<boolean>();
   // private checkedSubject = new BehaviorSubject<boolean>(false);

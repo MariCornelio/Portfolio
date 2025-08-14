@@ -1,6 +1,110 @@
 <article class="container-works" [ngClass]="{'bg':background}">
   <p>Works</p>
   <section class="works">
+    <div>
+      <div class="work" data-aos="zoom-in-right">
+        <img src="../../../assets/work-clinica.webp" alt="clinica">
+        <div class="work-name">
+          <div class="work-name__p">
+            <p>Web Clinic</p>
+          </div>
+          <button (click)="onClick('val12')"> Learn More</button>
+        </div>
+      </div>
+      <div class="modal-works" [ngClass]="valid12 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Web Clinic</p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Currently developing a web application for patient registration, appointment scheduling, and online
+                payments.
+              </p>
+              <ul>
+                <li>Integrated a secure payment gateway, appointment scheduling system, and patient registration for
+                  efficient online
+                  managemen</li>
+
+                <li>Configured Google Analytics for tracking and prepared the site for SEO optimization.</li>
+              </ul>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> React - Typescript - Google analytics</p>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-clinica.webp" alt="clinica">
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+    <div>
+      <div class="work" data-aos="zoom-in-left">
+        <img src="../../../assets/work-virtual-academy.webp" alt="virtual-academy">
+        <div class="work-name">
+          <div class="work-name__p">
+            <p>Virtual Academy</p>
+          </div>
+          <button (click)="onClick('val11')"> Learn More</button>
+        </div>
+      </div>
+      <div class="modal-works" [ngClass]="valid11 ? '.block' : 'none'">
+        <app-close></app-close>
+        <section class="modal-container">
+          <p>Virtual Academy </p>
+          <div class="modal-content">
+            <div class="modal-text">
+              <p>Currently developing an administrative panel for the integrated management of courses, teachers, and
+                students.
+              </p>
+              <ul>
+                <li>Designing modules for student enrollment and course assignment to teachers to improve academic
+                  scheduling.</li>
+
+                <li>Applying state management with Angular Signals to ensure real-time synchronization and reactive UI
+                  updates.</li>
+              </ul>
+              <div class="modal-text__div">
+                <p> Technologies</p>
+                <p> Angular- PrimeNG - RxJS - Signals - Tailwind - Typescript - REST APIs </p>
+              </div>
+              <div class="modal-link-container">
+                <div class="modal-link">
+                  <p> View Site</p>
+                  <a href="https://virtual-academy.netlify.app/" target="_blank">
+                    <div class="modal-link_logo">
+                      <div>
+                        <div>
+                          <img src="../../../assets/link-external2.svg" alt="view-site">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="modal-link">
+                  <p> Repository</p>
+                  <a href="https://github.com/MariCornelio/dashboard-school" target="_blank">
+                    <div class="modal-link_logo">
+                      <div>
+                        <div>
+                          <img src="../../../assets/github-logo.svg" alt="view-site">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="modal-img">
+              <img src="../../../assets/work-virtual-academy.webp" alt="virtual-academy">
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
     <!-- Inicio de seccion especial por ser para una empresa (se comenta una parte) -->
     <div>
       <div class="work" data-aos="zoom-in-right">

@@ -29,6 +29,8 @@ export class WorksComponent implements OnInit {
   valid8: boolean = false;
   valid9: boolean = false;
   valid10: boolean = false;
+  valid11: boolean = false;
+  valid12: boolean = false;
 
   background: boolean = false;
 
@@ -49,6 +51,12 @@ export class WorksComponent implements OnInit {
     this.sharedModalService.$modal9.subscribe((value) => (this.valid9 = value));
     this.sharedModalService.$modal10.subscribe(
       (value) => (this.valid10 = value)
+    );
+    this.sharedModalService.$modal11.subscribe(
+      (value) => (this.valid11 = value)
+    );
+    this.sharedModalService.$modal12.subscribe(
+      (value) => (this.valid12 = value)
     );
   }
 
@@ -92,6 +100,14 @@ export class WorksComponent implements OnInit {
     if (val === 'val10') {
       this.valid10 = true;
       this.sharedModalService.$modal10.emit(true);
+    }
+    if (val === 'val11') {
+      this.valid11 = true;
+      this.sharedModalService.$modal11.emit(true);
+    }
+    if (val === 'val12') {
+      this.valid12 = true;
+      this.sharedModalService.$modal12.emit(true);
     }
   }
   @HostListener('click')
